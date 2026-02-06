@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    margin: 0;
+    background-color: #111;
+    color: #eee;
+}
+
+/*  العنوان  */
+header {
+    background: linear-gradient(to left, #000, #222);
+    color: #d4af37;
+    padding: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* القائمة */
+nav {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #d4af37;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* المحتوى  */
+.container {
+    padding: 40px 20px;
+}
+
+/*  شبكة الأصناف */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/*بطاقة الصنف */
+.card {
+    background-color: #1a1a1a;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease;
+    border: 1px solid #2a2a2a;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* الصورة */
+.card img {
+    width: 50%;
+    height: 220px;
+  
+    object-fit: cover;
+    border-bottom: 2px solid #d4af37;
+}
+
+/* اسم الصنف  */
+.card h3 {
+    margin: 0;
+    padding: 20px;
+    font-size: 22px;
+    color: #d4af37;
+    text-align: center;
+}
+
+/* الفوتر  */
+footer {
+    background-color: #000;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
+
+
+/* الجوال  */
+@media (max-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 190px;
+    }
+}
